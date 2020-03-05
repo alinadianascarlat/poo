@@ -4,24 +4,24 @@
 using namespace std;
 
 class Complex {
-
 private:
 	float re;
 	float im;
 
 public:
 	Complex(float r = 0, float m = 0) {
-		r = re;
-		m = im;
-		cout << "Apel constructor"<<re<<""<<im<<endl;
+		re = r;
+		im = m;
+		cout << "Apel constructor" << re << " " << im << endl;
 	}
-	void afisare() {
-		cout<< re <<" +i" << im << endl;
 
-}
-
+	void afisare(int z = 9) {
+		cout << re <<" + i * " << im << endl;
+		cout << "z = " << z;
+	}
 };
+
 void main() {
-	Complex z(1, 2);
-	z.afisare();
+	Complex z;
+	z.afisare(5);
 }
