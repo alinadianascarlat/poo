@@ -11,27 +11,31 @@ private:
 	//apelare destructor
 public:
 	Complex() {
-		re = 0;
-		im = 0;
-		cout << " Apel constructor :" << re << "" << im << endl;
+		re = 5;
+		im = 5;
+		cout << "Apel constructor: " << re << "" << im << endl;
 	}
 	Complex(int r, int i) {
 		re = r;
 		im = i;
-		cout << "Apel constructor parametrii :" << re << "" << im << endl;
+		cout << "Apel constructor parametrii: " << re << "" << im << endl;
 	}
-	void afis() {
-		cout << re << "+i" << im << endl;
-}
+	
 	~Complex() {
 		cout << "Apel destructor " << re << "" << im << endl;
 	}
 
+	void afis() {
+		cout << re << " + i * " << im << endl;
+	}
 };
+
 void main() {
 	Complex c1;
 	Complex c2(1, 2);
 	c1.afis();
 	c2.afis();
 
+	//delete c1;
+	//delete c2;
 }
