@@ -26,10 +26,15 @@ public:
 		NumereRationale* prod = new NumereRationale(this->numarator * n->numarator, this->numitor * n->numitor);
 		return prod;
 	}
+	NumereRationale* aduna(NumereRationale* n) {
+		NumereRationale suma  = new NumereRationale(this->numarator * n->numitor, this->numarator * n->numitor, this->numitor * n->numitor);
+			return suma;
+	}
 };
 
+
 int main() {
-	int numarator, numitor;
+	int numarator, numitor
 
 	// creeaza numarul rational
 	NumereRationale* nr = new NumereRationale(4, 5);
@@ -44,4 +49,6 @@ int main() {
 	// TEMA
 	//NumereRationale* nr3 = nr->aduna(nr1);
 	//nr3->afisare();
+	NumereRationale* nr3 = new NumereRationale(2, 3);
+	nr3->afisare();
 }

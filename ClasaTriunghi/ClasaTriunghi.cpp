@@ -16,6 +16,9 @@ public:
 		this->c = c;
 	}
 
+	void afisare() {
+		cout << "perimetrul este :" << a << b << c << endl;
+	}
 };
  
 int main() {
@@ -23,7 +26,7 @@ int main() {
 	// afisezi la consola perimetru si aria
 	Triunghi t(2, 3, 4);
 
-	cout << "perimetrul = " << t.perimetrul();
+	cout << "perimetrul = " << t.perimetru();
 	// cout << "aria = " << t.aria();
 
 	return 0;
