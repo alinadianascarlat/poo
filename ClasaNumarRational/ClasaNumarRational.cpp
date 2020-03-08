@@ -27,14 +27,18 @@ public:
 		return prod;
 	}
 	NumereRationale* aduna(NumereRationale* n) {
-		NumereRationale suma  = new NumereRationale(this->numarator * n->numitor, this->numarator * n->numitor, this->numitor * n->numitor);
-			return suma;
+		int sumaNumartor = this->numarator * n->numitor + n->numarator * this->numitor;
+		int sumaNumitor = this->numitor*n->numitor;
+
+		//a/b + c/d = (a*d + c*b) / (b*d)
+		//this   n
+		NumereRationale* suma  = new NumereRationale(sumaNumartor, sumaNumitor);
+		return suma;
 	}
 };
 
-
 int main() {
-	int numarator, numitor
+	int numarator, numitor;
 
 	// creeaza numarul rational
 	NumereRationale* nr = new NumereRationale(4, 5);
@@ -47,8 +51,6 @@ int main() {
 	nr2->afisare();
 
 	// TEMA
-	//NumereRationale* nr3 = nr->aduna(nr1);
-	//nr3->afisare();
-	NumereRationale* nr3 = new NumereRationale(2, 3);
+	NumereRationale* nr3 = nr->aduna(nr1);
 	nr3->afisare();
 }
