@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -16,18 +16,33 @@ public:
 		this->c = c;
 	}
 
-	void afisare() {
-		cout << "perimetrul este :" << a << b << c << endl;
+	int perimetru() {
+		return a + b + c;
+	}
+
+	int aria() {
+		return a * b * c;
+	}
+	
+	bool poateFiiTriunghi() {
+		return a + b > c || a + c > b || b + c > a;
+
+		//if (a + b > c || a + c > b || b + c > a)
+		//	return true;
+		//else
+		//	return false;
 	}
 };
+
  
 int main() {
 	// creeze un triunghi
 	// afisezi la consola perimetru si aria
 	Triunghi t(2, 3, 4);
-
-	cout << "perimetrul = " << t.perimetru();
-	// cout << "aria = " << t.aria();
+   
+	cout << "perimetrul = " << t.perimetru() << endl;
+	cout << "aria = " << t.aria() << endl;
+	cout << "poate fi triunghi: " << t.poateFiiTriunghi() << endl;
 
 	return 0;
 }
