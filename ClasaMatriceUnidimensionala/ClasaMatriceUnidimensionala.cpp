@@ -17,6 +17,27 @@ private:
 	int* m;
 
 public:
+	Matrice() {
+		int lines = 0;
+		int cols = 0;
+		int* m = 0;
+	}
+
+	~Matrice() {
+		cout << "Apel destructor matrice" << endl;
+		delete m;
+	}  
+
+	Matrice(const Matrice* m1) {
+		this->lines = lines;
+		this->cols = cols;
+		this->m = new int[lines * cols];
+		for (int i = 0; i < lines * cols; i++) {
+			this->m[i] = m1->m[i];
+		}
+		cout << "Apel constructor de copiere" << endl;
+	}
+
 	void read() {
 		cout << "lines = ";
 		cin >> lines;
@@ -70,4 +91,9 @@ int main()
 	int lines = m->numberOfLines();
 	//getLines = numberOflines returneaza nr de linii
 	int cols = m->numberOfColums();
+	
+	Matrice* m1 = new Matrice(m);
+
+	delete m1;
+	delete m;
 }
