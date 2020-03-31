@@ -1,13 +1,13 @@
 #include <iostream>
 
 using namespace std;
-//Sa se implementeze tipul abstract Matrice care va retine matricea sub forma unui tablou
-//unidimensional.Clasa va contine :
+// Sa se implementeze tipul abstract Matrice care va retine matricea sub forma unui tablou
+// unidimensional.Clasa va contine :
 // Constructor de initializare
 // Constructor de copiere
-//Destructor
-//Metode pentu citire si afisare
-//Metoda pentru calcului normei
+// Destructor
+// Metode pentu citire si afisare
+// Metoda pentru calcului normei
 
 
 class Matrice {
@@ -74,7 +74,11 @@ public:
 	int numberOfColums() {
 		return cols;
 	}
+	
+	Matrice operator +(Matrice m);
 };
+
+
 
 int main()
 {

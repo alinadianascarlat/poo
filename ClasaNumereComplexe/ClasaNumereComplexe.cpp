@@ -1,3 +1,5 @@
+
+
 #include<iostream>
 #include<conio.h>
 
@@ -28,6 +30,7 @@ public:
 	void afis() {
 		cout << re << " + i * " << im << endl;
 	}
+	
 };
 
 void main() {
