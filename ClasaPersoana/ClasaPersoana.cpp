@@ -33,12 +33,7 @@ public:
 		this->nume = new char[strlen(n) + 1];
 		strcpy(this->nume, n);
 
-		/*if (strlen(nume) < strlen(n)) {
-			delete nume;
-			nume = new char[strlen(n) + 1];
-		}
-		strcpy(nume, n);
-		*/
+		
 	}
 };
 
