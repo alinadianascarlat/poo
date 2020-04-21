@@ -75,7 +75,8 @@ public:
 		for (int i = 0; i < lines; i++) {
 			for (int j = 0; j < cols; j++) {
 				for (int k = 0; k < lines; k++) {
-					rezultat->m[i * cols + j] += this->m[i * cols + k] * input.m[k * cols + j];
+					
+			     rezultat->m[i * cols + j] += this->m[i * cols + k] * input.m[k * cols + j];
 				}
 			}
 		}
