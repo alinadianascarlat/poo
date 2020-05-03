@@ -27,7 +27,7 @@ public:
 		cout << "Apel destructor Materiale";
 	}
 
-	void virtual afisare() {
+	void virtual  afisare() {
 		cout << "Titlu:" << titlu << endl;
 		cout << "Cota:" << cota << endl;
 	}
